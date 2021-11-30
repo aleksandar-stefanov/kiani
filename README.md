@@ -5,3 +5,5 @@ Website for medical cannabis store.
 
 Design by Ivan Stajic
 
+Code by Aleksandar Stefanov
+
