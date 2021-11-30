@@ -18,14 +18,14 @@ function nav() {
 
 
 // /*Pojavljivanje navigacije kada je mobilna navigacija zatvorena(prilikom resize)*/ 
- $(window).resize(function() {
-   if ( $(this).width() > 767) {
-    $('.navigation').css('display', 'block');
-  }
-   else {
-    $('.navigation').css('display', 'none');
-  }
- });
+//  $(window).resize(function() {
+//    if ( $(this).width() > 767) {
+//     $('.navigation').css('display', 'block');
+//   }
+//    else {
+//     $('.navigation').css('display', 'none');
+//   }
+//  });
 
 // $(window).resize(function(){
 //   if ( $(this).width() < 767 && $toggle.slideDown()) {
