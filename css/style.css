@@ -1,0 +1,891 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  outline: 0;
+  cursor: pointer; }
+
+* {
+  box-sizing: border-box; }
+
+/*font-famiy*/
+/*font-weight*/
+@font-face {
+  font-family: 'Titillium Web';
+  src: url("../fonts/TitilliumWeb-Regular.eot");
+  src: url("../fonts/TitilliumWeb-Regular.eot?#iefix") format("embedded-opentype"), url("../../src/fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../../src/fonts/TitilliumWeb-Regular.woff") format("woff"), url("../../src/fonts/TitilliumWeb-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Titillium Web';
+  src: url("../fonts/TitilliumWeb-SemiBold.eot");
+  src: url("../fonts/TitilliumWeb-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../src/fonts/TitilliumWeb-SemiBold.woff2") format("woff2"), url("../../src/fonts/TitilliumWeb-SemiBold.woff") format("woff"), url("../../src/fonts/TitilliumWeb-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+
+.wrapper {
+  width: 100%;
+  max-width: 940px;
+  /*izmeniti*/
+  padding: 0 20px;
+  margin: 0 auto; }
+
+.clearfix::after, .footer-middle-section::after, .main .wrapper::after, .top-product::after, .faq .wrapper::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.footer, .product-item-img, .contact, .faq-question-plus {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.opening-hours::before, .intro::before, .top-product-span::before, .faq-span::before {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #F8C357;
+  top: 3px;
+  left: 0px; }
+
+/**
+iconfont Webfont
+*/
+@font-face {
+  font-family: 'iconfont';
+  src: url("../fonts/iconfont.eot?1630009130858");
+  src: url("../fonts/iconfont.eot?#iefix-1630009130858") format("embedded-opentype"), url("../fonts/iconfont.woff2?1630009130858") format("woff2"), url("../fonts/iconfont.woff?1630009130858") format("woff"), url("../fonts/iconfont.ttf?1630009130858") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^='icon-']::before,
+[class*=' icon-']::before {
+  font-family: 'iconfont';
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  font-size: inherit;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/*
+Glyphs list
+*/
+.icon-facebook:before {
+  content: '\ea01'; }
+
+.icon-icon-location-footer:before {
+  content: '\ea02'; }
+
+.icon-icon-marihuana-dispensary:before {
+  content: '\ea03'; }
+
+.icon-icon-marihuana-oil:before {
+  content: '\ea04'; }
+
+.icon-icon-marihuana-pets:before {
+  content: '\ea05'; }
+
+.icon-icon-phone-footer:before {
+  content: '\ea06'; }
+
+.icon-icon-yellow-weed:before {
+  content: '\ea07'; }
+
+.icon-instagram:before {
+  content: '\ea08'; }
+
+.icon-youtube:before {
+  content: '\ea09'; }
+
+.footer {
+  padding: 50px 0; }
+
+.footer-top-section {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 51px;
+  border-bottom: 1px solid white;
+  justify-content: space-between; }
+  @media only screen and (max-width: 767px) {
+    .footer-top-section {
+      flex-direction: column;
+      align-items: center; } }
+
+@media only screen and (max-width: 767px) {
+  .footer-logo {
+    margin-bottom: 20px; } }
+
+.footer-logo-link {
+  display: inline-block; }
+  .footer-logo-link:hover {
+    opacity: 0.7; }
+
+.footer-logo-img {
+  display: block;
+  width: 62px; }
+
+.footer-contact {
+  display: flex;
+  flex-direction: row; }
+  @media only screen and (max-width: 767px) {
+    .footer-contact {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px; } }
+
+.footer-contact-address {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .footer-contact-address:not(:last-child) {
+    margin-right: 30px; }
+  @media only screen and (max-width: 767px) {
+    .footer-contact-address {
+      flex-direction: column; }
+      .footer-contact-address:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px; } }
+
+.footer-address-icon {
+  color: #276750;
+  background-color: #F8C357;
+  font-size: 26px;
+  border-radius: 50%;
+  padding: 9px 12px;
+  display: inline-block;
+  margin-right: 10px; }
+  @media only screen and (max-width: 767px) {
+    .footer-address-icon {
+      margin-right: 0;
+      margin-bottom: 10px; } }
+
+.footer-address-list {
+  list-style-type: none; }
+  @media only screen and (max-width: 767px) {
+    .footer-address-list {
+      text-align: center; } }
+
+.footer-address-item {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  margin-bottom: 2px; }
+
+.footer-address-item-link {
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "Titillium Web", "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px; }
+
+.footer-social-network {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.footer-social-network-item {
+  display: inline-block; }
+  .footer-social-network-item:not(:last-child) {
+    margin-right: 10px; }
+
+.footer-social-network-link {
+  display: inline-block; }
+  .footer-social-network-link:hover .footer-social-network-icon {
+    border: 1px solid #ffffff;
+    background-color: #276750;
+    color: #ffffff; }
+
+.footer-social-network-icon {
+  border: 1px solid transparent;
+  display: inline-block;
+  color: #276750;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-size: 26px;
+  padding: 9px 13px 13px 13px; }
+
+/*FOOTER MIDDLE*/
+.footer-middle-section {
+  padding: 50px 0;
+  border-bottom: 1px solid #ffffff; }
+
+.footer-middle-section-left {
+  float: left; }
+  @media only screen and (max-width: 767px) {
+    .footer-middle-section-left {
+      float: none;
+      margin-bottom: 30px;
+      text-align: center; } }
+
+.opening-hours {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: "Titillium Web", "Arial", sans-serif;
+  color: #ffffff;
+  position: relative;
+  padding-left: 19px;
+  margin-bottom: 10px; }
+  .opening-hours::before {
+    top: 7px; }
+  @media only screen and (max-width: 767px) {
+    .opening-hours {
+      display: inline-block; } }
+
+.opening-hours-list {
+  list-style-type: none; }
+
+.opening-hours-items {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff; }
+  .opening-hours-items .hours {
+    font-weight: 600; }
+
+.footer-middle-section-right {
+  float: right;
+  text-align: left;
+  max-width: 502px; }
+  @media only screen and (max-width: 767px) {
+    .footer-middle-section-right {
+      float: none;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      width: 100%;
+      text-align: center; } }
+
+.footer-middle-section-right-text {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-left: 19px;
+  margin-bottom: 22px; }
+  @media only screen and (max-width: 767px) {
+    .footer-middle-section-right-text {
+      margin-left: 0; } }
+
+.footer-form {
+  margin-left: 19px; }
+  .footer-form .sign-up {
+    padding: 16px; }
+  .footer-form .email {
+    margin-bottom: 20px; }
+  @media only screen and (max-width: 767px) {
+    .footer-form {
+      margin-left: 0; } }
+
+.footer-bottom-section {
+  text-align: center;
+  padding-top: 20px; }
+
+.copyright,
+.rights {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 0 10px; }
+  .copyright:not(:last-child),
+  .rights:not(:last-child) {
+    border-right: 1px solid #ffffff; }
+    @media only screen and (max-width: 767px) {
+      .copyright:not(:last-child),
+      .rights:not(:last-child) {
+        border: none; } }
+  @media only screen and (max-width: 767px) {
+    .copyright,
+    .rights {
+      display: block;
+      padding: 0; }
+      .copyright:not(:last-child),
+      .rights:not(:last-child) {
+        margin-bottom: 10px; } }
+
+.header {
+  text-align: center;
+  position: absolute;
+  z-index: 3;
+  top: 50px;
+  left: 0;
+  right: 0; }
+
+.logo-link,
+.logo-img {
+  display: inline-block; }
+  .logo-link:hover,
+  .logo-img:hover {
+    opacity: 0.7; }
+
+.logo-img {
+  max-width: 106px; }
+
+.main {
+  margin-top: 70px;
+  padding-bottom: 110px; }
+
+.main-image-container {
+  float: left;
+  max-width: 274px;
+  position: relative; }
+  @media only screen and (max-width: 767px) {
+    .main-image-container {
+      float: none;
+      clear: both;
+      width: 100%;
+      margin: 0 auto; } }
+
+.main-image {
+  width: 100%; }
+
+.certified-img {
+  max-width: 94px;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.main-text {
+  float: right;
+  text-align: left;
+  width: 53%;
+  font-size: 0; }
+  @media only screen and (max-width: 767px) {
+    .main-text {
+      float: none;
+      clear: both;
+      width: 100%;
+      margin: 20px auto 0 auto;
+      text-align: center; } }
+
+.intro {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #276750;
+  display: inline-block;
+  text-transform: uppercase;
+  padding-left: 19px;
+  position: relative;
+  margin-bottom: 20px; }
+
+.main-title {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 600;
+  color: #276750;
+  margin-bottom: 20px; }
+  .main-title .main-title-span {
+    color: #F8C357; }
+  @media only screen and (max-width: 767px) {
+    .main-title {
+      font-size: 28px; } }
+
+.main-first-paragraph,
+.main-second-paragraph {
+  font-family: "Titillium Web", "Arial", sans-serif; }
+
+.main-first-paragraph {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #23302C;
+  margin-bottom: 20px; }
+
+.main-second-paragraph {
+  font-size: 16px;
+  line-height: 25px;
+  color: #656E6B;
+  font-weight: 400;
+  margin-bottom: 30px; }
+
+.main-more-info-link,
+.main-product-page-link {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+  min-width: 168px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 50px;
+  text-align: center;
+  padding: 16px; }
+  @media only screen and (max-width: 767px) {
+    .main-more-info-link,
+    .main-product-page-link {
+      display: block;
+      margin: 0 auto; } }
+
+.main-more-info-link {
+  background-color: #F8C357;
+  color: #23302C;
+  margin-right: 15px; }
+  .main-more-info-link:hover {
+    color: #F8C357;
+    background-color: #23302C; }
+  @media only screen and (max-width: 767px) {
+    .main-more-info-link {
+      margin: 0 auto; } }
+
+.main-product-page-link {
+  background-color: #276750;
+  color: #ffffff; }
+  @media only screen and (max-width: 767px) {
+    .main-product-page-link {
+      margin-top: 20px; } }
+
+.header-banner {
+  text-align: center;
+  padding-top: 174px;
+  padding-bottom: 244px; }
+
+.banner-img {
+  border-radius: 15px;
+  max-width: 900px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  margin-top: -23%; }
+  @media only screen and (max-width: 767px) {
+    .banner-img {
+      margin-top: -27%; } }
+
+.header-title {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 65px;
+  color: #ffffff;
+  margin: 20px 0 20px; }
+  @media only screen and (max-width: 767px) {
+    .header-title {
+      font-size: 35px;
+      line-height: 45px; } }
+
+.header-paragraph {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #ffffff;
+  margin: 0 auto 30px auto;
+  max-width: 544px; }
+
+.email,
+.sign-up {
+  border-radius: 50px;
+  height: 45px; }
+
+.email {
+  min-width: 294px;
+  padding: 11px 20px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: #276750;
+  margin-right: 10px; }
+  .email::placeholder {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #656E6B; }
+  @media only screen and (max-width: 767px) {
+    .email {
+      min-width: 100%;
+      margin: 0 0 20px; } }
+
+.sign-up {
+  min-width: 146px;
+  padding: 16px 52px;
+  border: none;
+  outline: none;
+  background-color: #F8C357;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #23302C; }
+  .sign-up:hover {
+    color: #F8C357;
+    background-color: #23302C; }
+  @media only screen and (max-width: 767px) {
+    .sign-up {
+      min-width: 100%; } }
+
+.products-list {
+  background-color: #FBF5E8;
+  padding: 100px 0; }
+
+.top-product-left {
+  float: left;
+  width: 41%; }
+  @media only screen and (max-width: 767px) {
+    .top-product-left {
+      clear: both;
+      width: 100%;
+      text-align: center; } }
+
+.top-product-span {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #276750;
+  padding-left: 19px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px; }
+
+.top-product-title {
+  font-size: 36px;
+  line-height: 50px;
+  color: #276750;
+  font-weight: 600;
+  font-family: "Titillium Web", "Arial", sans-serif;
+  margin-bottom: 29px; }
+  @media only screen and (max-width: 767px) {
+    .top-product-title {
+      font-size: 28px;
+      line-height: 40px; } }
+
+.top-product-text {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: #656E6B;
+  max-width: 287px;
+  margin-bottom: 30px; }
+  @media only screen and (max-width: 767px) {
+    .top-product-text {
+      width: 100%;
+      margin: 0 auto 30px auto; } }
+
+.top-product-right-container {
+  float: right;
+  width: 50%; }
+  @media only screen and (max-width: 767px) {
+    .top-product-right-container {
+      clear: both;
+      width: 100%;
+      margin-top: 30px; } }
+
+.top-product-right {
+  max-width: 447px;
+  width: 100%;
+  display: block; }
+  @media only screen and (max-width: 767px) {
+    .top-product-right {
+      margin: 0 auto; } }
+
+/*ITEMS*/
+.bottom-products-list {
+  margin-top: 77px; }
+
+.bottom-products-list-container {
+  display: flex;
+  flex-direction: row; }
+  @media only screen and (max-width: 767px) {
+    .bottom-products-list-container {
+      flex-direction: column; } }
+
+.bottom-product-item {
+  width: 31%;
+  background-color: #ffffff;
+  margin-right: 12.5px;
+  margin-left: 12.5px; }
+  .bottom-product-item:last-child {
+    margin-right: 0; }
+  .bottom-product-item:first-child {
+    margin-left: 0; }
+  @media only screen and (max-width: 767px) {
+    .bottom-product-item {
+      margin: 0;
+      margin-top: 20px;
+      width: 100%; } }
+
+.product-item-img {
+  width: 100%;
+  min-height: 193px; }
+
+.product-item-img-container {
+  width: 100%;
+  position: relative; }
+
+.product-item-icon {
+  position: absolute;
+  color: #276750;
+  background: #F8C357;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 14px;
+  right: 20px;
+  bottom: -23px;
+  display: inline-block; }
+
+.product-item-text-container {
+  padding: 30px 20px;
+  font-family: "Titillium Web", "Arial", sans-serif; }
+
+.product-item-title {
+  font-size: 20px;
+  line-height: 26px;
+  color: #276750;
+  font-weight: 400;
+  margin-bottom: 15px; }
+
+.product-item-paragraph {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 20px; }
+
+.item-read-more-link {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #23302C;
+  border-bottom: 2px solid #F8C357; }
+  .item-read-more-link:hover {
+    color: #F8C357;
+    border-color: #23302C; }
+
+.contact {
+  padding: 68px 0;
+  text-align: center;
+  font-family: "Titillium Web", "Arial", sans-serif; }
+  .contact .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+.contact-icon {
+  color: #F8C357;
+  font-size: 30px;
+  display: inline-block;
+  margin-bottom: 20px; }
+
+.contact-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 10px;
+  color: #ffffff; }
+
+.contact-telephone {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 50px;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 30px; }
+  @media only screen and (max-width: 767px) {
+    .contact-telephone {
+      font-size: 28px; } }
+
+.contact-us-link {
+  display: inline-block; }
+
+.faq {
+  padding: 100px 0; }
+  .faq .wrapper {
+    display: flex;
+    flex-direction: row; }
+    @media only screen and (max-width: 767px) {
+      .faq .wrapper {
+        flex-direction: column; } }
+
+.faq-img-container {
+  max-width: 38%;
+  position: relative;
+  align-self: flex-start;
+  display: block;
+  border-radius: 15px; }
+  @media only screen and (max-width: 767px) {
+    .faq-img-container {
+      margin: 0 auto;
+      max-width: 349px;
+      width: 100%; } }
+
+/*FAQ QUESTIONS*/
+.faq-questions {
+  width: 57%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 65px; }
+  @media only screen and (max-width: 767px) {
+    .faq-questions {
+      margin: 40px auto 0 auto;
+      width: 100%;
+      max-width: 486px; } }
+
+.faq-span {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Titillium Web", "Arial", sans-serif;
+  line-height: 14px;
+  color: #276750;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  padding-left: 19px;
+  margin-bottom: 20px; }
+  @media only screen and (max-width: 767px) {
+    .faq-span {
+      margin: 0 auto 20px; } }
+
+.faq-title {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 50px;
+  color: #276750;
+  max-width: 414px;
+  margin-bottom: 40px; }
+  .faq-title .faq-title-span {
+    color: #F8C357; }
+  @media only screen and (max-width: 767px) {
+    .faq-title {
+      text-align: center;
+      max-width: 100%;
+      font-size: 24px;
+      line-height: 30px; } }
+
+.faq-question-list {
+  border-bottom: 1px solid #F8C357;
+  padding-bottom: 20px;
+  margin-bottom: 20px; }
+  .faq-question-list.active .faq-question-plus::after {
+    height: 0; }
+
+.faq-question-text {
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  padding: 0; }
+
+.faq-question-plus {
+  background-color: #276750;
+  background-size: auto;
+  border-radius: 50%;
+  min-width: 39px;
+  height: 39px;
+  display: inline-block;
+  margin-right: 9px;
+  position: relative;
+  border: 2px solid #276750;
+  transition: background-color 2s ease; }
+  .faq-question-plus::before, .faq-question-plus::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    transition: background-color 2s ease; }
+  .faq-question-plus::before {
+    height: 2px;
+    width: 13px; }
+  .faq-question-plus::after {
+    height: 13px;
+    width: 2px;
+    transition: height 0.5s ease, background-color 2s ease; }
+
+.faq-question-title {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #23302C;
+  display: inline-block;
+  font-family: "Titillium Web", "Arial", sans-serif; }
+  @media only screen and (max-width: 767px) {
+    .faq-question-title {
+      font-size: 16px;
+      line-height: 20px; } }
+
+.faq-question-answer-container {
+  display: none; }
+
+.faq-question-answer {
+  font-family: "Titillium Web", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #656E6B;
+  margin-left: 54px; }
+  @media only screen and (max-width: 767px) {
+    .faq-question-answer {
+      margin-left: 0;
+      text-align: justify; } }
